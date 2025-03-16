@@ -1,9 +1,16 @@
+import "../../Assets/nav.css";
+
 const Nav = () => {
-  // TODO: Add necessary code to display the navigation bar and link between the pages
-  
   return (
-    <div>Nav</div>
-  )
+    <nav className="navbar">
+      <a href="/" className="nav-button">
+        Home
+      </a>
+      <a href="/candidates" className="nav-button">
+        Candidates
+      </a>
+    </nav>
+  );
 };
 
 export default Nav;
