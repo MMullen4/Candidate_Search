@@ -8,7 +8,8 @@ interface Candidate {
   location: string;
   company: string;
   bio: string;
+  html_url: string;
   // Add other properties as needed
 }
-
+export default Candidate;
 

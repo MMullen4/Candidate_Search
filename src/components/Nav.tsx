@@ -1,4 +1,4 @@
-import "../../Assets/nav.css";
+import "../assets/nav.css";
 
 const Nav = () => {
   return (
@@ -6,7 +6,7 @@ const Nav = () => {
       <a href="/" className="nav-button">
         Home
       </a>
-      <a href="/candidates" className="nav-button">
+      <a href="/savedcandidates" className="nav-button">
         Candidates
       </a>
     </nav>

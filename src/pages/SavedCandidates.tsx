@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-// import { searchGithubUser } from "../api/API";
+import Candidate from "../interfaces/Candidate.interface";
+import CandidateCard from "../components/CandidateCard";
+
 import "../index.css";
 
 const SavedCandidates = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Load saved candidates from localStorage
   useEffect(() => {
@@ -37,6 +38,7 @@ const SavedCandidates = () => {
         <ul className="candidates-list">
           {candidates.map((candidate) => (
             <li key={candidate.id} className="candidate-item">
+              <CandidateCard resultingCandidate={candidate} selectCandidate={() => {}} />,
               <div className="candidate-info">
                 <span>{candidate.login}</span>
               </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { searchGithubUser, searchGithub } from "../api/API";
-// import { Candidate } from '../interfaces/Candidate.interface';
+import Candidate from '../interfaces/Candidate.interface';
 // import "../../Assets/nav.css";
 import "../index.css";
 
@@ -18,6 +18,7 @@ const CandidateSearch = () => {
     email: "",
     location: "",
     company: "",
+    html_url: "",
   });
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
