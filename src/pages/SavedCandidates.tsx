@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Candidate from "../interfaces/Candidate.interface";
+import type { Candidate } from "../interfaces/Candidate.interface";
 import CandidateCard from "../components/CandidateCard";
-
-import "../index.css";
+// import SavedCandidate from '../components/savedCandidates'
+// import "../index.css";
 
 const SavedCandidates = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -16,7 +16,6 @@ const SavedCandidates = () => {
         setCandidates(JSON.parse(saved));
       }
     };
-
     loadSavedCandidates();
   }, []);
 

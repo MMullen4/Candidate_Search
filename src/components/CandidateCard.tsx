@@ -1,5 +1,5 @@
-import type Candidate from "../interfaces/Candidate.interface";
-import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
+import type { Candidate } from "../interfaces/Candidate.interface";
+// import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
 
 type CandidateCardProps = {
   resultingCandidate: Candidate;  // prop to use
@@ -8,7 +8,7 @@ type CandidateCardProps = {
 
 const CandidateCard = ({
   resultingCandidate,
-  selectCandidate,
+  // selectCandidate,
 }: CandidateCardProps) => {
   return (
     <div>
@@ -75,23 +75,23 @@ const CandidateCard = ({
               marginTop: "10px",
             }}
           >
-            <IoRemoveCircle
+            {/* <IoRemoveCircle
               style={{
                 color: "red",
                 fontSize: "80px",
                 cursor: "pointer",
               }}
               onClick={() => selectCandidate(false)}
-            />
+            /> */}
 
-            <IoAddCircle
+            {/* <IoAddCircle
               onClick={() => selectCandidate(true)}
               style={{
                 fontSize: "80px",
                 color: "green",
                 cursor: "pointer",
               }}
-            />
+            /> */}
           </section>
         </>
       ) : (
