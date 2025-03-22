@@ -3,6 +3,7 @@ import { searchGithubUser, searchGithub } from "../api/API";
 import { Candidate } from '../interfaces/Candidate.interface';
 import "../assets/nav.css";
 import "../index.css";
+// import CandidateCard from "../components/CandidateCard";
 
 const CandidateSearch = () => {
   // create state var to store list of candidates
@@ -10,15 +11,15 @@ const CandidateSearch = () => {
   // create state var to store search query
 
   const [currentCandidate, setCurrentCandidate] = useState<Candidate>({
-    id: 0,
-    login: "",
-    avatar_url: "",
-    name: "",
-    bio: "",
-    email: "",
-    location: "",
-    company: "",
-    html_url: "",
+    id: null,
+    login: null,
+    avatar_url: null,
+    name: null,
+    bio: null,
+    email: null,
+    location: null,
+    company: null,
+    html_url: null,
   });
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -33,9 +34,11 @@ const CandidateSearch = () => {
   }, []);
 
   async function getNextUser() {
-    const user = await searchGithubUser(searchResults[currentIndex].login);
-    setCurrentCandidate(user);
-    setCurrentIndex(currentIndex + 1);
+    if (searchResults[currentIndex]?.login) {
+      const user = await searchGithubUser(searchResults[currentIndex]?.login!);
+      setCurrentCandidate(user);
+      setCurrentIndex(currentIndex + 1);
+    }
   }
 
   const saveCandidate = (candidate: Candidate) => {
@@ -56,8 +59,8 @@ const CandidateSearch = () => {
       <section className="candidates-list">
         <div className="candidate-info">
           <img
-            src={currentCandidate.avatar_url}
-            alt={`${currentCandidate.login}'s avatar`}
+            src={currentCandidate?.avatar_url ?? ''}
+            alt={`${currentCandidate?.login}'s avatar`}
             className="candidate-avatar"
           />
           <div className="candidate-details">

@@ -37,13 +37,19 @@ const SavedCandidates = () => {
         <ul className="candidates-list">
           {candidates.map((candidate) => (
             <li key={candidate.id} className="candidate-item">
-              <CandidateCard resultingCandidate={candidate} selectCandidate={() => {}} />,
+              <CandidateCard
+                resultingCandidate={candidate}
+                selectCandidate={() => {}}
+              />
+              ,
               <div className="candidate-info">
                 <span>{candidate.login}</span>
               </div>
               <div className="candidate-actions">
                 <button
-                  onClick={() => removeCandidate(candidate.id)}
+                  onClick={() =>
+                    removeCandidate(candidate.id as string | number)
+                  }
                   className="remove-button"
                 >
                   Remove
