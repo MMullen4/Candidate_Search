@@ -53,6 +53,10 @@ const CandidateSearch = () => {
   };
 
   return (
+    // <>
+    // CandidateSearch
+    // <CandidateCard resultingCandidate={currentCandidate} selectCandidate={selectCandidate} />
+    // </>
     <div className="candidate-search">
       <h1>Candidate Search</h1>
 
