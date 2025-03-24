@@ -53,38 +53,47 @@ const CandidateSearch = () => {
   };
 
   return (
-    // <>
-    // CandidateSearch
-    // <CandidateCard resultingCandidate={currentCandidate} selectCandidate={selectCandidate} />
-    // </>
-    <div className="candidate-search">
-      <h1>Candidate Search</h1>
+//     <div className="candidate-search">
+//       <h1>Candidate Search</h1>
+//       <section className="candidates-list">
+//         <CandidateCard
+//           // candidate={currentCandidate}
+//           resultingCandidate={currentCandidate}
+//           onSave={() => saveCandidate(currentCandidate)}
+//           onNext={getNextUser}
+//         />
+//       </section>
+//     </div>
+//   );
+// };
 
-      <section className="candidates-list">
-        <div className="candidate-info">
-          <img
-            src={currentCandidate?.avatar_url ?? ''}
-            alt={`${currentCandidate?.login}'s avatar`}
-            className="candidate-avatar"
-          />
-          <div className="candidate-details">
-            <strong>{currentCandidate.login}</strong>
-            {currentCandidate.name && <span> {currentCandidate.name}</span>}
-            {currentCandidate.bio && <p>{currentCandidate.bio}</p>}
+      <div className="candidate-search">
+        <h1>Candidate Search</h1>
+        <section className="candidates-list">
+          <div className="candidate-info">
+            <img
+              src={currentCandidate?.avatar_url ?? ''}
+              alt={`${currentCandidate?.login}'s avatar`}
+              className="candidate-avatar"
+            />
+            <div className="candidate-details">
+              <strong>{currentCandidate.login}</strong>
+              {currentCandidate.name && <span> {currentCandidate.name}</span>}
+              {currentCandidate.bio && <p>{currentCandidate.bio}</p>}
+            </div>
           </div>
-        </div>
-        <button
-          onClick={() => saveCandidate(currentCandidate)}
-          className="save-button"
-        >
-          Save Candidate
-        </button>
-        <button onClick={getNextUser} className="next-button">
-          Next Candidate
-        </button>
-      </section>
-    </div>
-  );
-};
+          <button
+            onClick={() => saveCandidate(currentCandidate)}
+            className="save-button"
+          >
+            Save Candidate
+          </button>
+          <button onClick={getNextUser} className="next-button">
+            Next Candidate
+          </button>
+        </section>
+      </div>
+    );
+  };
 
-export default CandidateSearch;
+  export default CandidateSearch;
