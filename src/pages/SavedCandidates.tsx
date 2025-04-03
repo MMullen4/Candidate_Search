@@ -49,20 +49,20 @@ const SavedCandidates = () => {
               {candidates.map((candidate) => (
                 <tr key={candidate.login}>
                   <td>
-                    <img
-                      src={candidate.avatar_url}
-                      alt={`${candidate.name}'s avatar`}
-                      className="img-thumbnail"
-                      style={{
-                        width: "50px",
-                        height: "50px",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </td>
-                  <td>{candidate.login}</td>
-                  <td>{candidate.location || "No location available."}</td>
-                  <td style={{ wordWrap: "break-word", maxWidth: "200px" }}>
+                      <img
+                        src={candidate.avatar_url ?? ""}
+                        alt={`${candidate.name}'s avatar`}
+                        className="img-thumbnail"
+                        style={{
+                          width: "50px",
+                          height: "50px",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </td>
+                    <td>{candidate.login}</td>
+                    <td>{candidate.location || "No location available."}</td>
+                    <td style={{ wordWrap: "break-word", maxWidth: "200px" }}>
                     <a
                       href={`mailto:${candidate.email}`}
                       className="text-decoration-none"
