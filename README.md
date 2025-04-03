@@ -10,7 +10,8 @@ A candidate search application that calls the GitHub API and renders data in the
 
 ## Visuals
 
-![](<Screenshot 2025-03-22 at 6.01.54 PM.png>)
+![Alt text](<Screenshot 2025-04-03 at 2.50.00 PM.png>)
+![Alt text](<Screenshot 2025-04-03 at 2.50.37 PM.png>)
 
 ## Prerequisites
 
