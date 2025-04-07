@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, "dist")));
 
 // Handle all routes by serving the index.html
-app.get("*", (req, res) => {
+app.get("*", (_, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
