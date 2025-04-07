@@ -10,10 +10,10 @@ app.use(express.static(path.join(__dirname, "dist")));
 
 // Handle all routes by serving the index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, "0.0.0.0", () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(Number(port), "0.0.0.0", () => {
+    console.log(`Server is running on port ${port}`);
 });
