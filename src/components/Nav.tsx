@@ -1,14 +1,15 @@
 import "../assets/nav.css";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className="navbar">
-      <a href="/" className="nav-button">
+      <Link to="/" className="nav-button">
         Home
-      </a>
-      <a href="/savedcandidates" className="nav-button">
+      </Link>
+      <Link to="/savedcandidates" className="nav-button">
         Candidates
-      </a>
+      </Link>
     </nav>
   );
 };
